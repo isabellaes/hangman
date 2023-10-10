@@ -5,7 +5,7 @@ for (let index = 0; index < buttons.length; index++) {
   buttons.item(index).addEventListener("click", function onClick() {
     const letter = this.innerText;
     const match = checkLetter(letter);
-
+    this.disabled = true;
     if (match === true) {
       this.style.backgroundColor = "green";
     } else {
