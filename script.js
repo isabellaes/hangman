@@ -40,8 +40,10 @@ function checkLetter(letter) {
   const lowerLetter = letter.toLowerCase();
 
   if (lowerCaseWord.includes(lowerLetter)) {
+    console.log(`Bokstaven ${letter} är med i ${lowerCaseWord}`)
     return true;
   } else {
+    console.log(`Bokstaven ${letter} är inte i ${lowerCaseWord}`)
     return false;
   }
 }
