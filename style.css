@@ -1,44 +1,100 @@
-.Sshadow{
-
+.Sshadow {
 }
 
-.head{
-
-
+.head {
 }
-.scaffold{
-
-
+.scaffold {
 }
-.body{
-
+.body {
 }
-.legs{
-
+.legs {
 }
-.arms{
-
-    
+.arms {
 }
 /* START */
 body {
   height: 100vh;
   width: 100vw;
+  margin: 0;
+  padding: 0;
 }
 .start {
   display: flex;
   height: 100%;
   width: 100%;
-  color: black;
-  font-size: 50px;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
+.start h1 {
+  color: black;
+  font-size: 4em;
+  margin: 1em;
+}
+
 .start a {
   border: 1px solid black;
-  background-color: aqua;
-  padding: 0.8em;
-  border-radius: 5em;
+  background-color: rgb(217, 217, 217);
+  color: black;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  margin-top: 1em;
+  border-radius: 0.5em;
+  font-size: 1.5em;
+  margin: 1em;
+}
+
+.start img {
+  height: 40%;
+  margin: 2em;
+}
+
+/* GAMEBOARD */
+.gameboard {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hangman-svg {
+  height: 40%;
+}
+
+.hangman-svg img {
+  height: 80%;
+}
+
+.game-word {
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.game-word p {
+  padding: 0.5em;
+  margin: 0.7em;
+  font-size: 2em;
+}
+
+.buttons {
+  height: 20%;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.buttons button {
+  padding: 0.5em;
+  margin: 0.7em;
+  font-size: 1em;
 }
