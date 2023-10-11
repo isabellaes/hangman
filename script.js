@@ -1,10 +1,10 @@
 // 6st gisningar
-//för varje gisning 
+//för varje gisning
 // länka till en ny del av SVG filen
 //gisningNR 1 = svg id¨
 // display Item
 //Dela upp SVG
-// get elementby .id 
+// get elementby .id
 //display block, display none
 const buttons = document.getElementsByTagName("button");
 
@@ -13,7 +13,7 @@ for (let index = 0; index < buttons.length; index++) {
   buttons.item(index).addEventListener("click", function onClick() {
     const letter = this.innerText;
     const match = checkLetter(letter);
-
+    this.disabled = true;
     if (match === true) {
       this.style.backgroundColor = "green";
     } else {
@@ -52,4 +52,13 @@ function checkLetter(letter) {
   } else {
     return false;
   }
+}
+
+//Skriv ut streck för random ord
+
+let wordDiv = document.querySelector(".game-word");
+for (let index = 0; index < randomWord.length; index++) {
+  const element = document.createElement("p");
+  element.innerHTML = "_";
+  wordDiv.appendChild(element);
 }
