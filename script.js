@@ -87,9 +87,10 @@ function resetGame() {
   remainingAttempts = 6;
   wordDisplay.textContent = "";
   attemptsDisplay.textContent = "";
+  console.log(buttons);
   buttons.forEach((button) => {
     button.disabled = false;
-    button.style.backgroundColor = "grey";
+    button.style.backgroundColor = "ligthgrey";
   });
   startGame();
 }
