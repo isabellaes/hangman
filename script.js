@@ -22,6 +22,9 @@ const wordDisplay = document.querySelector(".word-display");
 const attemptsDisplay = document.querySelector(".attempts-display");
 const buttons = document.querySelectorAll(".buttons button");
 
+//array för svg
+const hmanSvg=['ground','head','scaffold','legs','arms','body',];
+hmanSvg.reverse();
 // Uppdatera visningen av ordet med gissade bokstäver
 function updateWordDisplay() {
   wordDisplay.textContent = guessedWord.join(" ");
@@ -58,7 +61,7 @@ function checkWin() {
 // Kolla om spelaren har förlorat
 function checkLose() {
   if (remainingAttempts === 0) {
-    alert("Du har förlorat. Rätt ord var: " + selectedWord);
+    Document.querySelector("Du har förlorat. Rätt ord var: " + selectedWord);
     resetGame();
   }
 }
@@ -74,8 +77,9 @@ function handleGuess(letter) {
     buttonElement.style.backgroundColor = "green"; // Ändra knappens färg till grön
   } else {
     remainingAttempts--;
+    hManDsiplay();
     updateAttemptsDisplay();
-    checkLose();
+    
     buttonElement.style.backgroundColor = "red"; // Ändra knappens färg till röd
   }
 }
@@ -99,6 +103,25 @@ function startGame() {
   updateWordDisplay();
   updateAttemptsDisplay();
 }
+
+function hManDsiplay (){
+
+  console.log(hmanSvg)
+  const id = hmanSvg[remainingAttempts ];
+  console.log(id)
+ // Skriva ut svg filen
+  const element = document.getElementById(id);
+  element.style.display = "block";
+  console.log(element);
+  console.log(remainingAttempts);
+ // få rätt id på arrayn
+  
+ // ta bort ur arrayn
+  
+ // när arrayn är tom- skicka till you lose sidan
+
+}
+
 
 // Lyssna på klickhändelser på knapparna
 for (let i = 0; i < buttons.length; i++) {
