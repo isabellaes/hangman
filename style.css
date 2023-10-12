@@ -1,25 +1,22 @@
-
-
 #ground {
-display:none
+  display: none;
 }
 
 #head {
-  display:none
+  display: none;
 }
 
 #scaffold {
-  display: none
+  display: none;
 }
 #body {
-  display:none 
-
+  display: none;
 }
 #legs {
-  display:none
+  display: none;
 }
 #arms {
-  display:none
+  display: none;
 }
 /* START */
 body {
@@ -73,7 +70,7 @@ body {
 }
 
 .hangman-svg {
-  height: 40%;
+  height: 50%;
 }
 
 .hangman-svg img {
@@ -107,4 +104,8 @@ body {
   padding: 0.5em;
   margin: 0.7em;
   font-size: 1em;
+}
+
+#scaffold {
+  fill: blue;
 }
