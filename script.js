@@ -1,8 +1,20 @@
 ////// HÄNGA GUBBE //////
 
 // Variabler
-const words = ["banana", "computer", "elephant", "guitar", "jazz", "kangaroo", "mountain", "ocean", "piano", "telescope"];
-let selectedWord = words[Math.floor(Math.random() * words.length)].toLowerCase();
+const words = [
+  "banana",
+  "computer",
+  "elephant",
+  "guitar",
+  "jazz",
+  "kangaroo",
+  "mountain",
+  "ocean",
+  "piano",
+  "telescope",
+];
+let selectedWord =
+  words[Math.floor(Math.random() * words.length)].toLowerCase();
 let guessedWord = new Array(selectedWord.length).fill("_");
 let remainingAttempts = 6; // Antal försök
 
@@ -59,15 +71,14 @@ function handleGuess(letter) {
   if (isLetterInWord(letter)) {
     updateGuessedWord(letter);
     checkWin();
-    buttonElement.style.backgroundColor = 'green'; // Ändra knappens färg till grön
+    buttonElement.style.backgroundColor = "green"; // Ändra knappens färg till grön
   } else {
     remainingAttempts--;
     updateAttemptsDisplay();
     checkLose();
-    buttonElement.style.backgroundColor = 'red'; // Ändra knappens färg till röd
+    buttonElement.style.backgroundColor = "red"; // Ändra knappens färg till röd
   }
 }
-
 
 // Återställ spelet
 function resetGame() {
@@ -78,6 +89,7 @@ function resetGame() {
   attemptsDisplay.textContent = "";
   buttons.forEach((button) => {
     button.disabled = false;
+    button.style.backgroundColor = "grey";
   });
   startGame();
 }
@@ -90,10 +102,10 @@ function startGame() {
 
 // Lyssna på klickhändelser på knapparna
 for (let i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener('click', () => {
-        const letter = buttons[i].innerText;
-        handleGuess(letter);
-    });
+  buttons[i].addEventListener("click", () => {
+    const letter = buttons[i].innerText;
+    handleGuess(letter);
+  });
 }
 
 // Starta spelet när sidan laddas
