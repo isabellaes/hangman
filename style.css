@@ -1,15 +1,25 @@
-.Sshadow {
+
+
+#ground {
+display:none
 }
 
-.head {
+#head {
+  display:none
 }
-.scaffold {
+
+#scaffold {
+  display: none
 }
-.body {
+#body {
+  display:none 
+
 }
-.legs {
+#legs {
+  display:none
 }
-.arms {
+#arms {
+  display:none
 }
 /* START */
 body {
