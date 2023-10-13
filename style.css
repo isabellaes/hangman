@@ -69,43 +69,47 @@ body {
   flex-direction: column;
 }
 
-.hangman-svg {
-  height: 50%;
-}
-
-.hangman-svg img {
-  height: 80%;
-}
-
 .game-word {
-  height: 10%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  margin-top: 2rem;
 }
 
 .game-word p {
   padding: 0.5em;
   margin: 0.7em;
-  font-size: 2em;
+  font-size: 5em;
+}
+
+.word-display {
+  font-size: 6rem;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .buttons {
-  height: 20%;
-  width: 60%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 2rem;
+  width: 75%
 }
 
 .buttons button {
-  padding: 0.5em;
+  padding: 1.5em;
   margin: 0.7em;
   font-size: 1em;
+  border-radius: 1rem;
+  border: none;
 }
 
-#scaffold {
-  fill: blue;
+.buttons button:hover {
+  box-shadow: 0 0 0 4px black;
+}
+
+.attempts-display {
+  margin-top: 2rem;
+  font-size: 1.5rem;
 }

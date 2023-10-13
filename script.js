@@ -12,6 +12,25 @@ const words = [
   "ocean",
   "piano",
   "telescope",
+  "apple",
+  "strawberry",
+  "orange",
+  "butterfly",
+  "fireplace",
+  "zeppelin",
+  "waterfall",
+  "sunflower",
+  "chocolate",
+  "bicycle",
+  "dragon",
+  "umbrella",
+  "octopus",
+  "volcano",
+  "parachute",
+  "rainbow",
+  "penguin",
+  "hamburger",
+  "caterpillar",
 ];
 let selectedWord =
   words[Math.floor(Math.random() * words.length)].toLowerCase();
@@ -137,5 +156,12 @@ startGame();
 console.log(selectedWord);
 
 // Hint bokstav
+hintButton = document.getElementById("hintBtn")
+hintDisplay = document.getElementById("hint-display")
 
+function showHint () {
+  hintDisplay.textContent = `hint: ${selectedWord}`
+}
+
+hintButton.addEventListener("click", showHint)
 
