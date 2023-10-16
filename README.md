@@ -1,5 +1,7 @@
 # Hänga gubbe - inlämningssuppgift
 
+# Isabella, Lucas, Arvid
+
 # Syfte
 
 Kunna applicera datalogiskt tänkande och gå från idé till kod
