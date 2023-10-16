@@ -1,6 +1,6 @@
 ////// HÄNGA GUBBE //////
 
-// Variabler
+//ord till spelet
 const words = [
   "banana",
   "computer",
@@ -91,13 +91,13 @@ function handleGuess(letter) {
 
   if (isLetterInWord(letter)) {
     updateGuessedWord(letter);
-
+    buttonElement.disabled = true;
     buttonElement.style.backgroundColor = "green"; // Ändra knappens färg till grön
   } else {
     remainingAttempts--;
-    hManDsiplay();
+    hangManDisplay();
     updateAttemptsDisplay();
-
+    buttonElement.disabled = true;
     buttonElement.style.backgroundColor = "red"; // Ändra knappens färg till röd
   }
 }
@@ -109,7 +109,6 @@ function resetGame() {
   remainingAttempts = 6;
   wordDisplay.textContent = "";
   attemptsDisplay.textContent = "";
-  console.log(buttons);
   buttons.forEach((button) => {
     button.disabled = false;
     button.style.backgroundColor = "ligthgrey";
@@ -123,20 +122,11 @@ function startGame() {
   updateAttemptsDisplay();
 }
 
-function hManDsiplay() {
-  console.log(hmanSvg);
+//skriver ut svg filen
+function hangManDisplay() {
   const id = hmanSvg[remainingAttempts];
-  console.log(id);
-  // Skriva ut svg filen
   const element = document.getElementById(id);
   element.style.display = "block";
-  console.log(element);
-  console.log(remainingAttempts);
-  // få rätt id på arrayn
-
-  // ta bort ur arrayn
-
-  // när arrayn är tom- skicka till you lose sidan
 }
 
 // Lyssna på klickhändelser på knapparna
@@ -156,12 +146,11 @@ startGame();
 console.log(selectedWord);
 
 // Hint bokstav
-hintButton = document.getElementById("hintBtn")
-hintDisplay = document.getElementById("hint-display")
+hintButton = document.getElementById("hintBtn");
+hintDisplay = document.getElementById("hint-display");
 
-function showHint () {
-  hintDisplay.textContent = `hint: ${selectedWord}`
+function showHint() {
+  hintDisplay.textContent = `hint: ${selectedWord}`;
 }
 
-hintButton.addEventListener("click", showHint)
-
+hintButton.addEventListener("click", showHint);
